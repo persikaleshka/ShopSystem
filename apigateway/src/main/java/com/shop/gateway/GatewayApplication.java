@@ -1,4 +1,4 @@
-package main.java.com.shop.gateway;
+package com.shop.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
