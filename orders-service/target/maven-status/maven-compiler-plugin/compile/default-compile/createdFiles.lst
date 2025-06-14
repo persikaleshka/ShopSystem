@@ -1,0 +1,9 @@
+com/shop/orders/repository/OrderRepository.class
+com/shop/orders/messaging/OrderPaymentListener.class
+com/shop/orders/controller/OrderController.class
+com/shop/orders/service/OrderService.class
+com/shop/orders/OrdersApplication.class
+com/shop/orders/messaging/OutboxPublisher.class
+com/shop/orders/model/Order.class
+com/shop/orders/model/OrderStatus.class
+com/shop/orders/messaging/OrderCreatedEvent.class

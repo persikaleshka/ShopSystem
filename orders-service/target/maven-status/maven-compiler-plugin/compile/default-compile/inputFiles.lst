@@ -1,0 +1,9 @@
+/Users/alenkasharipova/ShopSystem/orders-service/src/main/java/com/shop/orders/OrdersApplication.java
+/Users/alenkasharipova/ShopSystem/orders-service/src/main/java/com/shop/orders/controller/OrderController.java
+/Users/alenkasharipova/ShopSystem/orders-service/src/main/java/com/shop/orders/messaging/OrderCreatedEvent.java
+/Users/alenkasharipova/ShopSystem/orders-service/src/main/java/com/shop/orders/messaging/OrderPaymentListener.java
+/Users/alenkasharipova/ShopSystem/orders-service/src/main/java/com/shop/orders/messaging/OutboxPublisher.java
+/Users/alenkasharipova/ShopSystem/orders-service/src/main/java/com/shop/orders/model/Order.java
+/Users/alenkasharipova/ShopSystem/orders-service/src/main/java/com/shop/orders/model/OrderStatus.java
+/Users/alenkasharipova/ShopSystem/orders-service/src/main/java/com/shop/orders/repository/OrderRepository.java
+/Users/alenkasharipova/ShopSystem/orders-service/src/main/java/com/shop/orders/service/OrderService.java
