@@ -1,0 +1,7 @@
+com/shop/payments/repository/AccountRepository.class
+com/shop/payments/model/Account.class
+com/shop/payments/controller/PaymentController.class
+com/shop/payments/messaging/PaymentResultSender.class
+com/shop/payments/service/PaymentService.class
+com/shop/payments/messaging/OrderCreatedListener.class
+com/shop/payments/messaging/OrderCreatedEvent.class
