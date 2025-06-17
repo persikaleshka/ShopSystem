@@ -1,1 +1,3 @@
-main/java/com/shop/gateway/GatewayApplication.class
+com/shop/gateway/controller/OrderController.class
+com/shop/gateway/controller/PaymentController.class
+com/shop/gateway/GatewayApplication.class

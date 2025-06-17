@@ -1,1 +1,3 @@
 /Users/alenkasharipova/ShopSystem/apigateway/src/main/java/com/shop/gateway/GatewayApplication.java
+/Users/alenkasharipova/ShopSystem/apigateway/src/main/java/com/shop/gateway/controller/OrderController.java
+/Users/alenkasharipova/ShopSystem/apigateway/src/main/java/com/shop/gateway/controller/PaymentController.java

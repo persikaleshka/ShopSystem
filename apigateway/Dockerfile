@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk-alpine
+FROM eclipse-temurin:17-jdk
 WORKDIR /app
-COPY target/gateway-0.0.1-SNAPSHOT.jar app.jar
+COPY target/apigateway-1.0.0.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
