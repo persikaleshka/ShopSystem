@@ -5,6 +5,8 @@ public class OrderCreatedEvent {
     public Long userId;
     public Double amount;
 
+    public OrderCreatedEvent() {}
+
     public OrderCreatedEvent(Long orderId, Long userId, Double amount) {
         this.orderId = orderId;
         this.userId = userId;
