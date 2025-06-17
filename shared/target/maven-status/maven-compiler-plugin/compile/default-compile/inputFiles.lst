@@ -1,2 +1,3 @@
-/Users/alenkasharipova/ShopSystem/shared/src/main/java/com/shop/share/dto/OrderCreatedEvent.java
-/Users/alenkasharipova/ShopSystem/shared/src/main/java/com/shop/share/dto/PaymentResultEvent.java
+/Users/alenkasharipova/ShopSystem/shared/src/main/java/com/shop/shared/dto/OrderCreatedEvent.java
+/Users/alenkasharipova/ShopSystem/shared/src/main/java/com/shop/shared/dto/OrderRequest.java
+/Users/alenkasharipova/ShopSystem/shared/src/main/java/com/shop/shared/dto/PaymentResultEvent.java

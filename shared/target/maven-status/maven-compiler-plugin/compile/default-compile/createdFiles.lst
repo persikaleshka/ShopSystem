@@ -1,2 +1,3 @@
 com/shop/shared/dto/OrderCreatedEvent.class
-com/shop/share/dto/PaymentResultEvent.class
+com/shop/shared/dto/PaymentResultEvent.class
+com/shop/shared/dto/OrderRequest.class

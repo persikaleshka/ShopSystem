@@ -1,4 +1,4 @@
-package com.shop.share.dto;
+package com.shop.shared.dto;
 
 public class OrderCreatedEvent {
     private Long orderId;
