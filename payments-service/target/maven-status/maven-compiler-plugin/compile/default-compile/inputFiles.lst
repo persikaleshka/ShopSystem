@@ -1,3 +1,4 @@
+/Users/alenkasharipova/ShopSystem/payments-service/src/main/java/com/shop/payments/PaymentsApplication.java
 /Users/alenkasharipova/ShopSystem/payments-service/src/main/java/com/shop/payments/controller/PaymentController.java
 /Users/alenkasharipova/ShopSystem/payments-service/src/main/java/com/shop/payments/messaging/OrderCreatedEvent.java
 /Users/alenkasharipova/ShopSystem/payments-service/src/main/java/com/shop/payments/messaging/OrderCreatedListener.java

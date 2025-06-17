@@ -1,8 +1,9 @@
 package com.shop.payments.messaging;
 
-import com.shop.share.dto.PaymentResultEvent;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
+
+import com.shop.shared.dto.PaymentResultEvent;
 
 @Component
 public class PaymentResultSender {
@@ -13,8 +14,8 @@ public class PaymentResultSender {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    public void send(Long orderId, boolean success) {
-        PaymentResultEvent event = new PaymentResultEvent(orderId, success);
+    public void send(Long orderId, Long userId, Double amount, boolean success) {
+        PaymentResultEvent event = new PaymentResultEvent(orderId, userId, amount, success);
         kafkaTemplate.send("payment-result", event);
         System.out.println("Sent payment result: " + event);
     }
