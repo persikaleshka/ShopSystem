@@ -15,6 +15,7 @@ services:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     depends_on:
       - zookeeper
@@ -26,7 +27,12 @@ services:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: pass
     ports:
-      - "5433:5432" # уникальный порт, чтобы не конфликтовало
+      - "5444:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d orders"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 
   postgres-payments:
     image: postgres:14
@@ -36,6 +42,11 @@ services:
       POSTGRES_PASSWORD: pass
     ports:
       - "5434:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d payments"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 
   orders-service:
     build: ./orders-service
@@ -47,8 +58,10 @@ services:
       SPRING_DATASOURCE_PASSWORD: pass
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
     depends_on:
-      - kafka
-      - postgres-orders
+      kafka:
+        condition: service_started
+      postgres-orders:
+        condition: service_healthy
 
   payments-service:
     build: ./payments-service
@@ -60,13 +73,17 @@ services:
       SPRING_DATASOURCE_PASSWORD: pass
       SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
     depends_on:
-      - kafka
-      - postgres-payments
+      kafka:
+        condition: service_started
+      postgres-payments:
+        condition: service_healthy
 
-  gateway:
-    build: ./gateway
+  apigateway:
+    build: ./apigateway
     ports:
       - "8080:8080"
     depends_on:
-      - orders-service
-      - payments-service
+      orders-service:
+        condition: service_started
+      payments-service:
+        condition: service_started
